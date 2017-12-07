@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Idea of the Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="../assets/css/main.css" />
+		<link rel="stylesheet" href="../main.css"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body class="idea-page">
+
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<h1>MAIN IDEA</h1>
+					<p>Social Graphs - DTU</p>
+				</header>
+				<footer>
+					<a class="button style2 learnLink">Learn more</a>
+				</footer>
+			</section>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class='container-fluid starting-box'>
+					<div class="row">
+						<div class="col-md-12">
+
+							<header>
+								<h2>Meet Our Data</h2>
+							</header>
+							<div class="about-section">
+								<div class="col-sm-12 col-md-6">
+									<p class="normal-text">
+										The main idea of our project is to perform sentiment analysis for countires and artists based on their music. We are looking for a smilraity connections beetwen them based on the type of their music and emmotions they bring with their songs. First, we started from analysis of the API data file from <span><a style="color:#d10c0c; font-weight:bold; text-decoration:none;" href="https://www.last.fm/" target="blank">LastFm API</a></span>,<br/>which includes information for each music artist about:
+										<ul class='item-list'>
+											<li><i class="fa fa-star-o" aria-hidden="true"></i>
+											Tags describing style of his music</li>
+											<li><i class="fa fa-star-o" aria-hidden="true"></i> Locations where is he mostly listened</li>
+											<li><i class="fa fa-star-o" aria-hidden="true"></i> Up to 50 top music tracks he has</li>
+											<li><i class="fa fa-star-o" aria-hidden="true"></i> List of artists similar to him</li>
+										</ul>
+									</div>
+									<div class="col-sm-12 col-md-6">
+ 							<p class="normal-text">This made possible for us to create 14 networks for picked countries and finally a main global network which is built from all the artists (450) in our database and represents a worldwide music map. More detailed information about our network, you can find in the <a href="network.html">Network section</a>.</p>
+					</div>
+
+					<div class="col-sm-12 col-md-12">
+						<h3>Understand our dataset</h3>
+							<div class="img-box">
+								<img src="../images/data.png" height="300px;" class="img-responsive" style="padding-left:30px; padding-right:30px;"/>
+							</div>
+							<h3 class="section-title">Lyrics data</h3>
+							<p>Our second data source comes from <a href="https://github.com/rhnvrm/lyric-api" target="blank" style="color:#d10c0c; font-weight:bold; text-decoration:none;">Heroku API at Github</a>, that returns lyrics after searching on lyrics.wikia.com based on Artist and Song. We collected data including up to 50 songs lyrics of each artist in dataset from LastFM to create his vocabulary and determine the sentiment level of each country by analyzing the most listened songs there.</p>
+						</div>
+					</div>
+
+					</div>
+					</div>
+			</div>
+			</div>
+		</div>
+	</section>
+
+		<!-- Feature 1 -->
+		<!--	<article id="first" class="container box style1 right">
+				<a href="pages/idea.html" class="image fit"><img src="images/last.png" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>MAIN IDEA</h2>
+					</header>
+					<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
+				</div>
+			</article> -->
+
+
+
+
+		<section id="footer">
+			<ul class="icons">
+				<a href="../index.html" class="icon fa fa-home"><span class="label"></span></a>
+				<a href="sentiment.html" class="icon fa fa-arrow-right"><span class="label"></span></a>
+				<!--	<li><a href="../index.html" class="icon fa fa-home"><span class="label"></span>GO</a></li> -->
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Untitled. All rights reserved.</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+			<script src="../assets/js/jquery.min.js"></script>
+			<script src="../assets/js/jquery.scrolly.min.js"></script>
+			<script src="../assets/js/jquery.poptrox.min.js"></script>
+			<script src="../assets/js/skel.min.js"></script>
+			<script src="../assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="json/artist_data.json" type="text/javascript"></script>
+			<script src="../main.js" type="text/javascript"></script>
+			<script src="../assets/js/main.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</body>
+</html>

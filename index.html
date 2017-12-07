@@ -1,0 +1,225 @@
+<!DOCTYPE HTML>
+<!--
+	Overflow by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Social Graphs Project</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="main.css"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+	</head>
+	<body>
+		<!-- Header -->
+			<section id="header">
+				<header>
+					<h1>Explore Music Worldwide</h1>
+					<p>Social Graphs - DTU</p>
+				</header>
+				<footer>
+					<a href="#banner" class="button style2 scrolly-middle">GO!</a>
+				</footer>
+			</section>
+
+		<!-- Banner -->
+			<section id="banner">
+				<div class='container-fluid'>
+					<div class="row">
+						<div class="col-md-12">
+							<header>
+								<h2>About</h2>
+							</header>
+							<div class="about-section">
+								<p class="front-text">
+									We are 3 students from DTU and we would like to share with you our work, which was made for the purposes of<br/> the Social Graphs And Interactions course in fall 2017.</p>
+
+									<p class="front-text"> You will find here different information about the process of exploring data of music artists and their songs, which we used to built networks of similar artists and analyzed emotional attachment to their songs.</p>
+
+									<p class="front-text">For the beggingin play around and type the name of the artist or band of your choice. Find out where are  they the most popular and what are the similar artisits to them.</p>
+							</div>
+
+							<div class="learn-more">
+								<h3 class="instruction">Learn more about your favourite music artists:</h3>
+								<input class="artist-form" type="text" id="userArtist" placeholder="Your Artist"></input>
+								<button class="search-button show_results" onclick="findArtist()">Check</button>
+							</div>
+						</div>
+					</div>
+
+				<div class="row">
+					<div class="col-md-12">
+						<div class="result-box slidingDiv" style="text-align:left;">
+							<div class="inline">
+								<h5 class="result-categorie">Popular in:</h5>
+								<p class="search-result" id="position"></p>
+							</div>
+							<div class="inline">
+								<h5 class="result-categorie">Similar to:</h5>
+								<p class="search-result" id="similar"></p>
+							</div>
+						</div>
+						</div>
+					</div>
+					</div>
+					</div>
+				</div>
+				<footer>
+					<a href="#first" class="button style2 scrolly">Explore</a>
+				</footer>
+			</div>
+		</div>
+	</section>
+
+			<article id="first" class="container box style1 left">
+				<a href="pages/idea.html" class="image fit"><img src="images/last.png" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>MAIN IDEA</h2>
+					</header>
+					<p>Learn about our dataset and what we have done with it!</p>
+					<a href="pages/idea.html" style="color:#d10c0c; font-weight:bold;">Read more...</a>
+				</div>
+			</article>
+
+			<article class="container box style1 right">
+				<a href="pages/sentiment.html" class="image fit"><img style="width:auto;" src="images/words.png" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>Sentiment Analysis</h2>
+					</header>
+					<p>We used lyrics from artists songs to perfrom sentiment analysis on emotional output that they bring to their fans</p>
+					<a href="pages/sentiment.html" style="color:#d10c0c; font-weight:bold;">Read more...</a>
+				</div>
+			</article>
+
+
+			<article class="container box style1 left">
+				<a href="pages/network.html" class="image fit"><img src="images/network.png" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>Creating network</h2>
+					</header>
+					<p>Rhoncus mattis egestas sed fusce sodales rutrum et etiam ullamcorper. Etiam egestas scelerisque ac duis magna lorem ipsum dolor.</p>
+				</div>
+			</article>
+
+
+			<article class="container box style1 right">
+				<a href="pages/pages/communities.html" class="image fit"><img src="images/network.png" alt="" /></a>
+				<div class="inner">
+					<header>
+						<h2>Detecting Comunities</h2>
+					</header>
+					<p>Each artist is stored along with his tags, which describe the music genre and style he plays or is similar to. In that way the communities can be detected and labeled into our network.</p>
+					<a href="pages/communities.html" style="color:#d10c0c; font-weight:bold;">Read more...</a>
+				</div>
+			</article>
+
+		<!-- Graphs Plots -->
+			<article class="container box style2">
+				<header>
+					<h2>Plots and Graphs</h2>
+					<p>Take a look into visualization of our data!</p>
+				</header>
+				<div class="inner gallery">
+					<div class="row 0%">
+						<div class="3u 12u(mobile)">
+					<!--	<a href="images/fulls/01.jpg" class="image fit"> -->
+						<a data-toggle="modal" data-target="#exampleModalLong">
+							<img src="images/thumbs/01.jpg" alt="" title="Worldwide network" class="image fit"/>
+						</a>
+
+								<!-- Modal -->
+							<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+								  <div class="modal-dialog" role="document">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+								        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+								          <span aria-hidden="true">&times;</span>
+								        </button>
+								      </div>
+								      <div class="modal-body">
+								        ...
+								      </div>
+								      <div class="modal-footer">
+								        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+								        <button type="button" class="btn btn-primary">Save changes</button>
+								      </div>
+								    </div>
+								  </div>
+								</div>
+						</div>
+
+						<div class="3u 12u(mobile)"><a href="images/fulls/02.jpg" class="image fit"><img src="images/thumbs/02.jpg" alt="" title="Dressed in Clarity" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/03.jpg" class="image fit"><img src="images/thumbs/03.jpg" alt="" title="Raven" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/04.jpg" class="image fit"><img src="images/thumbs/04.jpg" alt="" title="I'll have a cup of Disneyland, please" /></a></div>
+					</div>
+					<div class="row 0%">
+						<div class="3u 12u(mobile)"><a href="images/fulls/05.jpg" class="image fit"><img src="images/thumbs/05.jpg" alt="" title="Cherish" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/06.jpg" class="image fit"><img src="images/thumbs/06.jpg" alt="" title="Different." /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/07.jpg" class="image fit"><img src="images/thumbs/07.jpg" alt="" title="History was made here" /></a></div>
+						<div class="3u 12u(mobile)"><a href="images/fulls/08.jpg" class="image fit"><img src="images/thumbs/08.jpg" alt="" title="People come and go and walk away" /></a></div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Contact -->
+			<article class="container box style3">
+				<header>
+					<h2>Do you have any questions?</h2>
+					<p>Feel free to contact us!</p>
+				</header>
+				<form method="post" action="#">
+					<div class="row 50%">
+						<div class="6u 12u$(mobile)"><input type="text" class="text" name="name" placeholder="Name" /></div>
+						<div class="6u$ 12u$(mobile)"><input type="text" class="text" name="email" placeholder="Email" /></div>
+						<div class="12u$">
+							<textarea name="message" placeholder="Message"></textarea>
+						</div>
+						<div class="12u$">
+							<ul class="actions">
+								<li><input type="submit" value="Send Message" /></li>
+							</ul>
+						</div>
+					</div>
+				</form>
+			</article>
+
+
+		<section id="footer">
+			<ul class="icons">
+				<!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
+				<li><a href="#" class="icon fa-github"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-database"><span class="label">Google+</span></a></li>
+				<!--<li><a href="#" class="icon fa-pinterest"><span class="label">Pinterest</span></a></li>
+				<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>-->
+			</ul>
+			<div class="copyright">
+				<ul class="menu">
+					<li>&copy; Untitled. All rights reserved.</li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="json/artist_data.json" type="text/javascript"></script>
+			<script src="main.js" type="text/javascript"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	</body>
+</html>
