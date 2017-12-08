@@ -24,6 +24,13 @@ $(document).ready(function(){
        }
  });
 
+ $("#userArtistSentiment").keypress(function(e) {
+     if(e.which == 13) {
+         e.preventDefault();
+         $("#findSentiment").click();
+      }
+});
+
 
 });
 
@@ -46,17 +53,9 @@ $(document).ready(function(){
         console.log(obj.lower_name);
   			document.getElementById("position").innerHTML = obj.present.join(',  ');
   			document.getElementById("similar").innerHTML =  obj.similar_artist.join(',  ');
-
-  			/*for(var key in obj.sentiment)
-          	{
-              // Show just two most relevant categories without numbers
-              document.getElementById("emo").innerHTML+= key + ": " + obj.sentiment[key] + "% " + " \n"
-            }*/
   		}
 
   	}
-
-  //  checkAvailable();
 
   }
 
@@ -66,8 +65,6 @@ $(document).ready(function(){
 
   }
 } */
-
-
 
 var artistVocabulary = [];
 
