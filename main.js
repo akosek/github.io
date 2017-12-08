@@ -17,9 +17,17 @@ $(document).ready(function(){
       }, 1500);
   });
 
+  $("#userArtist").keypress(function(e) {
+      if(e.which == 13) {
+          e.preventDefault();
+          $("#checkArtist").click();
+       }
+ });
+
 
 });
 
+  var allArtistsArray = [];
   function findArtist(){
   //  document.getElementById("emo").innerHTML = " ";
     document.getElementById("position").innerHTML = " ";
@@ -28,15 +36,16 @@ $(document).ready(function(){
   	var uservalue = document.getElementById("userArtist").value;
     var smallValue = uservalue.toLowerCase();
 
+
   	for (var i = 0; i < artists.length; i++){
   		var obj = artists[i];
+
+      var allArtistsArray = artists[i].name;
 
   		if(obj.lower_name == smallValue){
         console.log(obj.lower_name);
   			document.getElementById("position").innerHTML = obj.present.join(',  ');
-  			//document.getElementById("voc").innerHTML = "Most used words: " + obj.vocabulary;
   			document.getElementById("similar").innerHTML =  obj.similar_artist.join(',  ');
-      //  document.getElementById("happy_level").innerHTML = obj.happiness_position
 
   			/*for(var key in obj.sentiment)
           	{
@@ -44,8 +53,21 @@ $(document).ready(function(){
               document.getElementById("emo").innerHTML+= key + ": " + obj.sentiment[key] + "% " + " \n"
             }*/
   		}
+
   	}
+
+  //  checkAvailable();
+
   }
+
+/*function checkAvailable (){
+  for (var i= 1; i< allArtistsArray.length; i++){
+    console.log(allArtistsArray[i]);
+
+  }
+} */
+
+
 
 var artistVocabulary = [];
 
@@ -79,7 +101,7 @@ function FindArtistSentiment() {
 
             var chartSentiData = [{
                         values: percentageSentiArray,
-                        labels: ['Happy/Chreeful', 'Love', 'Angry', 'Depressed/Helpless', 'Fear', 'Shame/Guilty'],
+                        labels: ['Love', 'Shame/Guilty', 'Angry', 'Depressed/Helpless', 'Fear', 'Happy/Chreeful'],
                         type: 'pie',
                         hoverinfo: 'label+percent',
                         font: {
@@ -87,7 +109,7 @@ function FindArtistSentiment() {
                         },
                         color: '#fff',
                         marker: {
-                            colors: ['rgb(241, 196, 15)', 'rgb(255,115,142)', 'rgb(113,90,124)', 'rgb(138, 136, 149)', 'rgb(22, 160, 133), rgb(87, 180, 204)']
+                            colors: ['rgb(255,115,142)', 'rgb(87, 180, 204)', 'rgb(113,90,124)', 'rgb(138, 136, 149)', 'rgb(22, 160, 133)', 'rgb(241, 196, 15)']
                         }
                         }];
 
@@ -106,10 +128,6 @@ function FindArtistSentiment() {
         }
     }
     return arr;
-} */
-
-/*function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
 } */
 
 function FindCountry (){
@@ -141,12 +159,11 @@ function FindCountry (){
           console.log(key + choice.sentiment[key]);
           percentageArray.push(percentage);
 
-        //  removeElementsWithValue(percentageArray, 0);
             console.log("This is new array " + percentageArray);
 
             var chartData = [{
                         values: percentageArray,
-                        labels: ['Happy/Chreeful', 'Love', 'Angry', 'Depressed/Helpless', 'Fear', 'Shame/Guilty'],
+                        labels: ['Love', 'Shame/Guilty', 'Angry', 'Depressed/Helpless', 'Fear', 'Happy/Chreeful'],
                         type: 'pie',
                         hoverinfo: 'label+percent',
                         font: {
@@ -154,13 +171,12 @@ function FindCountry (){
                         },
                         color: '#fff',
                         marker: {
-                            colors: ['rgb(241, 196, 15)', 'rgb(208, 44, 129)', 'rgb(44, 62, 80)', 'rgb(142, 68, 173)', 'rgb(22, 160, 133), rgb(87, 180, 204)']
+                            colors: ['rgb(255,115,142)', 'rgb(87, 180, 204)', 'rgb(113,90,124)', 'rgb(138, 136, 149)', 'rgb(22, 160, 133)', 'rgb(241, 196, 15)']
                         }
                         }];
 
             Plotly.newPlot('plotDiv', chartData);
       };
-
 
     }
 

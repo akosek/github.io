@@ -3,10 +3,28 @@ $(document).ready(function () {
   $('#option1').show();
   $('#selectMe').change(function () {
     $('.group').hide();
+    pickTopArtists();
     $('#'+$(this).val()).show();
   })
 });
 
+function pickTopArtists() {
+
+  var c = document.getElementById('selectMe');
+  var userCountryChoice = c.options[c.selectedIndex].text;
+  console.log("User choice " + userCountryChoice);
+
+  for(var i = 0; i < countries.length; i++){
+    var pick = countries[i];
+
+    console.log(countries[i]);
+
+    if(pick.name == userCountryChoice) {
+      document.getElementById("artistsFamous").innerHTML = pick.top_artist.join(',  ');
+      document.getElementById("countryTags").innerHTML = pick.top_community.join(',  ');
+    }
+  }
+}
 
 
 function draw() {

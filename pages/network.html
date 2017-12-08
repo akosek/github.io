@@ -28,19 +28,17 @@
 				<div class='container-fluid'>
 					<div class="row">
 						<div class="col-md-12">
-
-				<header>
-					<h2>Network</h2>
-					<p></p>
-				</header>
-				<div class="about-section">
-					 <p>We explored music in 14 countries, including our home-countries and other geographical locations that we believe our data analysis would be better and more efficient. By that extend we managed to structure a one global network, so we could have a better and more clear perception of conections between artists and their different type of music. As far as our network is concerned, artists plays the role of nodes (150) and each node is connected to another one, determined by their similarity (Edges) to other artist.</p>
-					</div>
-					</div>
+							<header>
+								<h2>Network</h2>
+							</header>
+							<div class="about-section">
+					 			<p>We explored music in 14 countries, including our home-countries and other geographical locations that we were intrested for analysis. By that extend we managed to structure a one global network, so we could have a better and more clear perception of conections between artists and their different type of music. Artists plays the role of nodes (150) and each node is connected to another one, determined by their similarity (Edges) to other artist, that we got from LastFm API.</p>
+							</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-		</div>
 	</section>
 
 
@@ -50,7 +48,8 @@
 						<div class="col-md-12">
 							<header>
 								<h2>Music Networks for 14 countries</h2>
-								<p>We built seperated networks for 14 picked countries in order to see which are the most popular there and what are the communities of different type of music we can find inside. Play around!</p>
+								<p class="under-header">We built seperated networks for 14 picked countries in order to see which are the most famous artists there and what types of music we can find inside.</p>
+								<h3 style="margin-top:1.5em;">Play around! <br/>After network displays, click on the artist to see his degree centrality and number of connections with other artists he has.</h3>
 							</header>
 						</div>
 					<div class="col-sm-12 col-md-12">
@@ -76,38 +75,39 @@
 					</div>
 
 					<div class="col-sm-12 col-md-12">
-						<h3>Top Artists:</h3>
-						<h3>Top Communities:</h3>
+						<!--<button onclick="pickTopArtists()">Check</button>-->
+						<h3>Top Artists: <span id="artistsFamous" class="result-added"></span></h3>
+						<h3>Top Community: <span id="countryTags" class="result-added"></span></h3>
 						<div class='show-artists' >
 						</div>
 
-						<iframe id="Denmark" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/27.embed"></iframe>
+						<iframe id="Denmark" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/91.embed"></iframe>
 
-						<iframe id="Poland" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/15.embed"></iframe>
+						<iframe id="Poland" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/43.embed"></iframe>
 
-						<iframe id="Germany" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/35.embed"></iframe>
+						<iframe id="Germany" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/51.embed"></iframe>
 
-						<iframe id="Spain" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/39.embed"></iframe>
+						<iframe id="Spain" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/47.embed"></iframe>
 
-						<iframe id="Greece" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/37.embed"></iframe>
+						<iframe id="Greece" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/71.embed"></iframe>
 
-						<iframe id="France" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/29.embed"></iframe>
+						<iframe id="France" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/67.embed"></iframe>
 
-						<iframe id="England" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/25.embed"></iframe>
+						<iframe id="England" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/63.embed"></iframe>
 
-						<iframe id="Estonia" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/31.embed"></iframe>
+						<iframe id="Estonia" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/59.embed"></iframe>
 
-						<iframe id="US" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/13.embed"></iframe>
+						<iframe id="US" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/87.embed"></iframe>
 
 						<iframe id="Canada" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/23.embed"></iframe>
 
-						<iframe id="Mexico" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/33.embed"></iframe>
+						<iframe id="Mexico" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/75.embed"></iframe>
 
-						<iframe id="Brazil" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/17.embed"></iframe>
+						<iframe id="Brazil" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/83.embed"></iframe>
 
-						<iframe id="Australia" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/19.embed"></iframe>
+						<iframe id="Australia" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/55.embed"></iframe>
 
-						<iframe id="Zeland" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/21.embed"></iframe>
+						<iframe id="Zeland" class="group" width="980" height="900" frameborder="0" scrolling="no" src="https://plot.ly/~Xiexar/79.embed"></iframe>
 
 					</div>
 					</div>
@@ -115,28 +115,13 @@
 			</article>
 
 			<article id="second" class="container container-network box style1 left">
-				<a href="pages/idea.html" class="image fit"><img src="images/last.png" alt="" /></a>
+				<a href="../global-network/index.html" class="image fit"><img src="images/last.png" alt="" /></a>
 				<div class="inner">
 					<header>
 						<h2>Global Network</h2>
 					</header>
 
-					<p>Tortor faucibus ullamcorper nec tempus purus sed penatibus. Lacinia pellentesque eleifend vitae est elit tristique velit tempus etiam.</p>
-
-
-					<!--<div id="networkDiv">
-							<div id="wrapper">
-									<div id="mynetwork"></div>
-									<div id="loadingBar">
-											<div class="outerBorder">
-													<div id="text">0%</div>
-													<div id="border">
-															<div id="bar"></div>
-													</div>
-											</div>
-									</div>
-							</div>
-						</div>-->
+					<p>Check out the music global network, which contains all the artists from our dataset. Be patient, it takes some time to load this huge music map! <a href="../global-network/index.html">Explore..</a></p>
 
 				</div>
 			</article>

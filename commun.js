@@ -1,27 +1,34 @@
 function displayCommunity () {
 
-	document.getElementById("wordcloudCommun").innerHTML = " ";
+	document.getElementById("wordcloud").innerHTML = " ";
 
 	var a = document.getElementById('selectCommunity');
 	var userCommun = a.options[a.selectedIndex].text;
 
 	console.log("User choice " + userCommun);
 
-	for (var i = 0; i < communities.length; i++){
-		var comunChoice = communities[i];
+	var myComunArray = community[0].communities;
 
-		if (comunChoice.tags == userCommun) {
+	for (var i= 0; i< myComunArray.length; i++) {
+		var lookComun = myComunArray[i];
 
-			d3.wordcloudCommun()
-			.size([550, 350])
-			.fill(d3.scale.ordinal().range(["#00386b", "#5686a9", "#8A8895", "#57b4cc"]))
-			.words(newVocabulary).start();
+		if(userCommun == lookComun.tags.join(', ')){
+			
+			console.log(lookComun.tags);
+			var communityVocabulary = lookComun.vocabulary;
+			console.log(lookComun.top_artist);
 
+			document.getElementById("topComunArt").innerHTML = lookComun.top_artist.join(',  ');
+
+			console.log(communityVocabulary);
+
+				d3.wordcloud()
+					.size([550, 350])
+					.fill(d3.scale.ordinal().range(["#00386b", "#5686a9", "#8A8895", "#57b4cc"]))
+					.words(communityVocabulary).start();
 
 		}
 
-
 	}
 
-
-//}
+}

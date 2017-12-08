@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+	<script src="global-edges.json" type="text/javascript"></script>
+	<script src="global-nodes.json" type="text/javascript"></script>
+    <title>Global Network</title>
+
+    <style type="text/css">
+        #mynetwork {
+            width: 900px;
+            height: 900px;
+            border: 1px solid lightgray;
+        }
+    </style>
+
+    <script type="text/javascript" src="../vis/dist/vis.js"></script>
+    <link href="../vis/dist/vis-network.min.css" rel="stylesheet" type="text/css"/>
+
+    <script type="text/javascript">
+        function draw() {
+
+				 // create some nodes and edges
+				 var edges = new vis.DataSet(exp_edges);
+				 var nodes = new vis.DataSet(exp_nodes);
+
+            // create a network
+            var container = document.getElementById('mynetwork');
+            var data = {
+                nodes: nodes,
+                edges: edges
+            };
+            var options = {
+                nodes: {
+                    shape: 'dot',
+                    size: 30
+                },
+                physics: {
+                    forceAtlas2Based: {
+                        gravitationalConstant: -26,
+                        centralGravity: 0.005,
+                        springLength: 230,
+                        springConstant: 0.18
+                    },
+                    maxVelocity: 146,
+                    solver: 'forceAtlas2Based',
+                    timestep: 0.35,
+                    stabilization: {iterations: 150}
+                }
+            };
+            var network = new vis.Network(container, data, options);
+
+        }
+    </script>
+
+</head>
+
+<body onload="draw()">
+<p>
+    Relations between all the music artists in our dataset.
+</p>
+
+<div id="mynetwork"></div>
+
+</body>
+</html>

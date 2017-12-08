@@ -53,46 +53,46 @@
 							<div class="col-md-12">
 								<header>
 									<h2>Explore sentiments for different communities</h2>
-									<p>Pick the community to find out which words are the most common for their music style.</p>
+									<p class="under-header">Pick the community to find out who is the most famous artist and which words are the most common for their music style.</p>
 								</header>
 							</div>
-							<div class="col-sm-12 col-md-12" style="text-align:center;">
 
+							<div class="col-sm-12 col-md-12" style="text-align:center; padding-top:30px;">
 								<div class="form-group">
-									<label for="selCommunity">Select music style:</label>
+								<!--	<label for="selCommunity">Select music style:</label>-->
 									<select class="form-control" id="selectCommunity">
-										<option value="Rock">Rock</option>
-										<option value="Pop">Pop</option>
-										<option value="Classic">Classic</option>
-										<option value="Greece">Blalas</option>
-										<option value="Poland">Poland</option>
-										<option value="Germany">Germany</option>
-										<option value="United Kingdom">United Kingdom</option>
-										<option value="Estonia">Estonia</option>
-										<option value="United States">US</option>
-										<option value="Canada">Canada</option>
-										<option value="Brazil">Brazil</option>
-										<option value="Mexico">Mexico</option>
-										<option value="Australia">Australia</option>
-										<option value="New Zeland">New Zeland</option>
+										<option value="classic-rock">rock, classic rock, alternative</option>
+										<option value="jamaica">jamaica, male vocalists, rocksteady</option>
+										<option value="spanish">rock, spanish</option>
+										<option value="danish">danish, dansk, denmark</option>
+										<option value="pop">pop, singer-songwriter, rnb</option>
+										<option value="alternative-rock">alternative rock, rock, alternative</option>
+										<option value="electronic">electronic, electronica, alternative</option>
+										<option value="indie-rock">indie, alternative, indie rock</option>
+										<option value="rap">hip-hop, rap, hip hop</option>
+										<option value="brazil">brazil, brazilian, brasil</option>
+										<option value="german">deutsch, german, germany</option>
+										<option value="jazz">jazz fusion, sonar kollektiv, indie</option>
+										<option value="composers">composers, choral, organ</option>
+										<option value="polish">polish, alternative, poland</option>
+										<option value="alt-sp">alternative, alternative rock, spanish rock</option>
+										<option value="folk-rock">folk rock, indie, male vocalists</option>
 									</select>
 								</div>
 
-								<button onclick="displayCommunity()" class="search-button country-button">Explore</button>
 
+								<button onclick="displayCommunity()" class="search-button country-button">Explore</button>
 							</div>
 
 							<div class="col-sm-12 col-md-12">
-								<div id='wordcloudCommun' style="text-align:center;"></div>
+								<h3 style="margin-bottom:1em;">Most Famous Artists: <span id="topComunArt" class="result-added"></span></h3>
+								<div id='wordcloud' style="text-align:center;"></div>
 								<!--<div id="plotCommunDiv" style="text-align:center;"></div>-->
 							</div>
 
 						</div>
 					</div>
 				</article>
-
-
-
 
 		<!-- Feature 1 -->
 	<!--		<article id="first" class="container container-network box style1 right">
@@ -106,9 +106,6 @@
 					<p>We created 6 emotional categories with collection of words...</p>
 				</div>
 			</article> -->
-
-
-
 
 		<section id="footer">
 			<ul class="icons">
@@ -134,7 +131,8 @@
 
 			<script src="../json/artist_data.json" type="text/javascript"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-			<script src="../json/country_data.json" type="text/javascript"></script>
+			<script src="../json/global_data.json" type="text/javascript"></script>
+			<!--<script src="../json/country_data.json" type="text/javascript"></script>-->
 			<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 	    <!-- Numeric JS -->
 	    <src="https://cdnjs.cloudflare.com/ajax/libs/numeric/1.2.6/numeric.min.js"></script>
