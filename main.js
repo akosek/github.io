@@ -11,6 +11,12 @@ $(document).ready(function(){
       }, 1500);
   });
 
+  $("#dataLink").click(function() {
+      $('html, body').animate({
+          scrollTop: $("#footer").offset().top
+      }, 1000);
+  });
+
   $(".resultLink").click(function() {
       $('html, body').animate({
           scrollTop: $(".result-box").offset().top
